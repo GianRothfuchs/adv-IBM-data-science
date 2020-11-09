@@ -77,6 +77,11 @@ spark = SparkSession \
 
 ## ApacheSparkSQL Programming
 
+´´´python
+#Get lenght of data set
+spark.sql('select ### as cnt from washing').first().cnt
+
+´´´
 
 
 

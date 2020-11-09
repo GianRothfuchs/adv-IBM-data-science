@@ -58,10 +58,25 @@ ApacheSpark support four languages: Java, Scala, Python, and R. Where Scala typi
 
 ## ApacheSpark Programming in Python
 
+### Setup
+Installation and addition to namespace:
+´´´
+!pip install pyspark==2.4.5
+
+from pyspark import SparkContext, SparkConf
+from pyspark.sql import SparkSession
+
+sc = SparkContext.getOrCreate(SparkConf().setMaster("local[*]"))
+
+spark = SparkSession \
+    .builder \
+    .getOrCreate()
+	
+´´´
 
 
+## ApacheSparkSQL Programming
 
-[6, 8, 10, 12]
 
 
 

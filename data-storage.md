@@ -4,7 +4,7 @@ The most common data storage options are SQL, NoSQL, and ObjectStorage. Each wit
 
 SQL Database
 | Pros                        | Cons                                |
-|:---------------------------:|:-----------------------------------:|
+|:---------------------------|:-----------------------------------|
 | Well known and established  | Cannot handle well changing schemas |
 | High integrity              | hard to scale                       |
 | High data normalization     | High storage cost                   |
@@ -13,7 +13,7 @@ SQL Database
 
 NoSQL Database
 | Pros               | Cons                  |
-|:------------------:|:---------------------:|
+|:------------------|:---------------------|
 | Dynamic schema     | No data normalization |
 | Low storage cost   | No data integrity     |
 | Linear scalability | High storage cost     |

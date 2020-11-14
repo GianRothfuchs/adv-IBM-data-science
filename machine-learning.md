@@ -117,11 +117,23 @@ model.stages[2].summary.r2
 ```
 
 ## Refresher on Bayesian Inference
-
 Bayesian method of inference is where the probability of a hypothesis (H) is updated as new evidence (E) becomes available. The process follows the following steps:
 1. Begin with prior distribution $p(H)$
 2. Collect new data/evidence $E$
 3. Calcualte the likelihood - how compatible the new evidence (E) is with the hypothesis (H): $p(E|H)$
 4. Optain the posterior - the prob of ou the hypothesis given the evidence: $p(H|E) = \frac{p(E|H) p(H)}{p(E)}$
+
+## Support Vector Machine (SVM)
+Is a linear classification model. Classification label can be binomial or multinomial. 
+
+[Example implementation in ApacheSpark](/notebooks/upportVectorMachineExmpl.ipynb)
+
+## Bootstrap Aggregation (Bagging)
+This is a sampling strategy which sub-samples the original data set multiple times. For example in RandomForest a decision-tree like structure is estimated on the top of each sub-sample and subsequently averaged. RandomForest approcha helps to overcome the over-fitting tendency of a single decision tree. RandomForest ist highly suited for parallelization. 
+
+## Boosting, Gradient Boosted Trees
+Boosting is the idea of sequentially stacking weak-learning models on the top of eachother. One model is fitted on the top of the residuals of the previous models. A weighting process then takes care of the weights assigned to the individual models. The resulting weights are essentially minimizing the sum of suqared errors.
+
+[Example Gradient Boosted Tree in ApacheSpark](/notebooks/GradientBoostedTree.ipynb)
 
 

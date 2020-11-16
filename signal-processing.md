@@ -1,4 +1,5 @@
 # Signal Processing
+
 ## Discrete Fourier Transformation
 
 ### Application
@@ -77,7 +78,50 @@ Having the A_k, B_k coefficients the magnitude an phase shift can be calculated 
 Magnitude: |X_k| = sqrt(A_k**2 + B_k**2)
 Phase shift: PHI = tan^{-1}(B_k/A_k)
 
-[SystemML](/notebooks/FT.dml) implementation (inefficient,though) fo Fourier Transformation 
+[SystemML implementation](/notebooks/FT.dml) (inefficient,though) fo Fourier Transformation 
+
+
+## Wavelet Transformation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

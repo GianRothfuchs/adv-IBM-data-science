@@ -83,9 +83,23 @@ Phase shift: PHI = tan^{-1}(B_k/A_k)
 
 ## Wavelet Transformation
 
+Inuitively the following formula goes over the singal many times until all feasible scales and stretches are exhausted. A combination of different scales and stretches of the same mother wavelet is then used to decompose the signal i.e. computing the coefficients x(t). Again intutively speaking this generates a non-zero coefficient eachtime the wavelet and the original series coinciedes in terms of trough and crest. This is process is called scaling and translation.
+
+CWT(\tau, s) = 1\sqrt(|s|) \int^{\inf}_{-\inf} x(t)\Psi((t -\tau)/(s)) dt
+ where /tau stands for translation, and s for scale
 
 
+\Psi(t) is a function of time generating a wavelet, which is continuous in the time and the frequency domain. A wavelet is described best as a small wave. The coeficients \tau and s determine the main form of the wavelet. Wavelets can take a variety of [shapes](https://ch.mathworks.com/help/wavelet/gs/introduction-to-the-wavelet-families.html).
 
+
+In practice a discrete version of Wavelet Transformation is used for data compression and noise requction for example in images. A very common pipeline is the following:
+
+1. Take a Signal S
+2. Pass to Wavelet Transformation
+3. Pass resulting coefficients to Principal Component Transformation
+4. Apply Support Vectro Machine on Principal Components
+
+Pipeline Implementation
 
 
 

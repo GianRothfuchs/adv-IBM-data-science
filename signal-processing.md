@@ -5,7 +5,7 @@
 ### Application
 The Fourier transformation decomposes a signal into frequencies that make it up. For example a music chord, can be decomposed in the tree constituting frequencies (i.e. the tones). Each being represented as a sinus wave of the form y(t) = A*sin(2*pi*f*t + p). Where A is the amplitude, f the frequency, and p the phase shift. The follwoing code generates sample waves:
 
-´´´
+```python
 
 	def gen_wave(frequency, amplitude, Time, phaseshift, samplingrate):
 		
@@ -21,7 +21,7 @@ The Fourier transformation decomposes a signal into frequencies that make it up.
 
 	amplitude = amplitude1 + amplitude2 + amplitude3
 
-´´´
+```
 
 The resulting complex signal is shown below:
 
@@ -29,7 +29,7 @@ The resulting complex signal is shown below:
 
 the complex signal can the be decompsoed again intro its frequencies by aplying Fourier transformation.
 
-´´´
+```python
 
 	sr=50 #in Hz
 
@@ -42,14 +42,12 @@ the complex signal can the be decompsoed again intro its frequencies by aplying 
 	p = fft(y) # take the fourier transform 
 
 	mag = np.sqrt(p.real**2 + p.imag**2)
-
 	mag = mag * 2 / n
-
 	mag = mag[0:math.ceil((n)/2.0)]
 
 	x = np.arange(0, len(mag), 1.0) * (sr / n)
 
-´´´
+```
 Resultign the correct decomposition:
 
 ![Complex Signal](/screenshots/complex_signal_decomp.png)
@@ -97,7 +95,7 @@ In practice a discrete version of Wavelet Transformation is used for data compre
 1. Take a Signal S
 2. Pass to Wavelet Transformation
 3. Pass resulting coefficients to Principal Component Transformation
-4. Apply Support Vectro Machine on Principal Components
+4. Apply Support Vector Machine on Principal Components
 
 [Pipeline Implementation](/notebooks/WaveletExample.ipynb)
 

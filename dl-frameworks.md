@@ -278,6 +278,14 @@ model = load_model('full_model.h5')
 ```
 
 
+## PyTorch
+
+### Installation
+
+PyTorch installation parameters based on the hardware setup can be found on [PyTorch Website](https://pytorch.org/). 
+
+[Example PyTorch ](/notebooks/PyTorch_Intro.ipynb)
+
 
 
 
